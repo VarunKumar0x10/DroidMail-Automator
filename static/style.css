@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, #eef2ff, #f8fafc);
+    color: #1f2937;
+}
+
+.header {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 480px;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    border-top: 6px solid #4f46e5;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.section h3 {
+    margin-bottom: 10px;
+    color: #2563eb;
+}
+
+.section.whatsapp h3 {
+    color: #16a34a;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #c7d2fe;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+.primary-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background: linear-gradient(135deg, #4f46e5, #2563eb);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.note {
+    margin-top: 20px;
+    padding: 12px;
+    background: #eef2ff;
+    border-left: 4px solid #4f46e5;
+    font-size: 13px;
+}
+
+.hint {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 6px;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    color: #6b7280;
+}

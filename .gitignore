@@ -1,0 +1,6 @@
+.venv/
+older_version/
+trajectories/
+.env
+*.pyc
+__pycache__/

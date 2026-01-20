@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Business Automation Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script>
+        function toggleAutomation(type) {
+            document.getElementById("email-section").style.display =
+                type === "email" ? "block" : "none";
+
+            document.getElementById("whatsapp-section").style.display =
+                type === "whatsapp" ? "block" : "none";
+        }
+
+        window.onload = function () {
+            toggleAutomation("whatsapp"); // default selection
+        };
+    </script>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Business Automation Assistant</h1>
+        <p>AI-powered business messaging automation using real Android apps</p>
+    </header>
+
+    <main class="main">
+        <div class="card">
+            <h2>Select Automation Type</h2>
+
+            <form method="POST" action="/generate">
+
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="automation_type" value="email" onclick="toggleAutomation('email')">
+                        📧 Email Automation
+                    </label>
+
+                    <label>
+                        <input type="radio" name="automation_type" value="whatsapp" checked
+                            onclick="toggleAutomation('whatsapp')">
+                        💬 WhatsApp Automation
+                    </label>
+                </div>
+
+                <!-- EMAIL -->
+                <div id="email-section" style="display:none;">
+                    <label>Recipient Email</label>
+                    <input type="email" name="email_to" placeholder="client@company.com">
+
+                    <label>Email Purpose</label>
+                    <textarea name="email_prompt" placeholder="Ask about payment status"></textarea>
+                </div>
+
+                <!-- WHATSAPP -->
+                <div id="whatsapp-section">
+                    <label>Phone / Contact Name</label>
+                    <input type="text" name="wa_contact" placeholder="Arav Jain">
+
+                    <label>Message Purpose</label>
+                    <textarea name="wa_prompt" placeholder="Follow up on pending payment"></textarea>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Run Automation
+                </button>
+            </form>
+
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        Prototype • Android Automation • User-Controlled
+    </footer>
+
+</body>
+
+</html>

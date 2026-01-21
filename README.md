@@ -5,6 +5,10 @@
 By utilizing **Android Intents** rather than complex backend APIs (such as SMTP or the WhatsApp Business API), this project provides a **no-config, device-native solution** that works directly on any Android device or emulator.
 
 ---
+## Screenshot
+<p align="center">
+  <img src="static/hero.jpeg" width="600">
+</p>
 
 ## 🌟 Why DroidMail-Automator?
 
